@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://static.vecteezy.com/system/resources/previews/049/462/643/non_2x/advanced-trading-robot-analyzing-cryptocurrency-market-in-futuristic-environment-with-digital-interface-and-data-visualization-photo.jpeg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      text-align: center;
+      animation: slideIn 1s ease;
+    }
+
+    .login-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .login-box h2 {
+      margin-bottom: 25px;
+      color: #ffffff;
+      background-color: #007BFF;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    label {
+      text-align: left;
+      font-weight: bold;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 1rem;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      .login-box {
+        padding: 30px 20px;
+      }
+
+      .login-box h2 {
+        font-size: 1.5rem;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <img src="https://img.freepik.com/premium-photo/stock-trader-broker-male-cartoon-character-sitting-trader-desk-front-computer-screen-flat-vector-illustration-trading-room-interior-stock-market-data_960782-106691.jpg" alt="User Icon" class="login-img">
+    <h2>Quantams</h2>
+    <form action="dashboard.html" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="button" onclick="window.location.href='index.html'">Login</button>
+
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; Welcome from <strong>Team Quantus</strong> 🚀 | Built with ❤️</p>
+  </footer>
+
+</body>
+</html>

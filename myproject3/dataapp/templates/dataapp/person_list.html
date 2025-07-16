@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Person list</title>
+    </head>
+    <body>
+        <h1>Person List </h1>
+        <ul>
+            {% for person in people %}
+            <li>{{person.full_name}} {{person.email}}</li>
+            {%empty%}
+            <li> no people found</li>
+            {% endfor %}
+
+        </ul>
+ <p><a href="{% url 'add_person' %}">Add New Person</a></p> 
+    </body>
+    </html>

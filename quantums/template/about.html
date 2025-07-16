@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Quantams</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.7;
+    }
+
+    header {
+      background-color: #0f172a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .brand h1 {
+      font-size: 1.5rem;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f1f5f9;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #0ea5e9;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #0ea5e9;
+      font-weight: 600;
+    }
+
+    .mission-box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      margin-top: 40px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .value-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .value-card i {
+      font-size: 32px;
+      color: #0ea5e9;
+      margin-bottom: 12px;
+    }
+
+    .value-card h4 {
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin-top: 60px;
+      border-left: 4px solid #0ea5e9;
+      padding-left: 20px;
+    }
+
+    .timeline-item {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: #0ea5e9;
+      border-radius: 50%;
+      position: absolute;
+      left: -31px;
+      top: 3px;
+    }
+
+    .timeline-item h4 {
+      font-size: 1.2rem;
+      color: #0ea5e9;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0f172a;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a2e0b3f6e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="https://img.freepik.com/premium-vector/trade-bull-logo-icon-vector_841298-282.jpg" alt="Logo">
+      <h1>Quantams</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index.html') }}">Home</a></li>
+        <li><a href="{{ url_for('feedback.html') }}">Feedback</a></li>
+        <li><a href="{{ url_for('bots.html') }}">Bots</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('DOC.HTML') }}">Docs</a></li>
+        <li><a href="{{ url_for('contact us page.html') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Content -->
+  <section>
+    <h2>Who We Are</h2>
+    <div class="mission-box">
+      <p><span class="highlight">Quantams</span> is an AI-driven trading automation platform revolutionizing how modern traders operate. We're on a mission to eliminate emotional trading and manual inefficiencies using machine learning, real-time data, and no-code customization tools.</p>
+      <p>We empower traders — from first-time investors to professional scalpers — to design, deploy, and optimize algorithmic bots within minutes.</p>
+    </div>
+
+    <div class="values">
+      <div class="value-card">
+        <i class="fas fa-brain"></i>
+        <h4>AI-First Philosophy</h4>
+        <p>We believe that smart algorithms can outperform emotion-led decisions every single time.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-user-shield"></i>
+        <h4>User-Centric Security</h4>
+        <p>End-to-end encryption and trusted broker integration ensure your trades are safe.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-code"></i>
+        <h4>No Code. All Control.</h4>
+        <p>Create powerful strategies without writing a line of code — just plug & play.</p>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>2023</h4>
+        <p>Conceptualized Quantams to help retail investors compete with institutional tools.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2024</h4>
+        <p>Launched private beta with early access for quant traders and algo strategists.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2025</h4>
+        <p>Reached 10K+ bot deployments and growing community across India, UK & Singapore.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Quantams. Built with ❤️ for traders who think smart.
+  </footer>
+
+</body>
+</html>

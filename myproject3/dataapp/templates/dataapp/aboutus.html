@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us - SmileCare Ortho Clinic</title>
+</head>
+<body style="font-family:Arial; margin:0; background:#f4fbff; color:#333;">
+
+  <!-- Header -->
+  <header style="background:#004c6d; color:white; padding:20px; text-align:center;">
+    <h1>About Our Orthodontic Practice</h1>
+    <nav>
+      <a href="index.html" style="color:white; margin:10px;">Home</a>
+      <a href="services.html" style="color:white; margin:10px;">Services</a>
+      <a href="appointment.html" style="color:white; margin:10px;">Book Appointment</a>
+      <a href="contact.html" style="color:white; margin:10px;">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Doctor Profile -->
+  <section style="padding:40px; max-width:1000px; margin:auto; text-align:center;">
+   <img src="{% static 'images/doctor.jpg' %}" alt="Sample Image" style="width:180px; border-radius:50%; border:4px solid #004c6d; margin-bottom:20px;">
+    <h2>Dr. Anant Tyagi, MDS Orthodontics</h2>
+    <p style="max-width:800px; margin:auto;">Dr. Anant Tyagi is a certified orthodontist with an MDS in Orthodontics and Dentofacial Orthopedics. With years of clinical excellence and a passion for modern smile design, Dr. Tyagi has helped hundreds of patients achieve healthy, confident smiles using cutting-edge orthodontic solutions.</p>
+
+    <h3 style="margin-top:40px;">Why Choose SmileCare?</h3>
+    <ul style="text-align:left; display:inline-block; margin-top:10px;">
+      <li>Certified MDS Orthodontist</li>
+      <li>Advanced treatment options: Clear Aligners, Braces, and Jaw Correction</li>
+      <li>Specialized care for children, teens, and adults</li>
+      <li>Modern clinic environment with patient-first approach</li>
+    </ul>
+  </section>
+
+  <!-- Certificates Section -->
+  <section style="padding:40px; background:#e8f7fb;">
+    <h3 style="text-align:center; margin-bottom:30px;">Professional Certifications & Qualifications</h3>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1100px; margin:auto;">
+      <div style="background:white; padding:20px; width:220px; text-align:center; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        <h4>MDS - Orthodontics</h4>
+        <p>Master of Dental Surgery<br>3-Year Specialization Program</p>
+      </div>
+      <div style="background:white; padding:20px; width:220px; text-align:center; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        <h4>Clear Aligners Certified</h4>
+        <p>Invisalign & Other Aligner Therapy<br>Certified Provider</p>
+      </div>
+      <div style="background:white; padding:20px; width:220px; text-align:center; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        <h4>Advanced Surgical Ortho</h4>
+        <p>Jaw Alignment & Pre-Surgical Planning<br>Certified Course</p>
+      </div>
+      <div style="background:white; padding:20px; width:220px; text-align:center; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        <h4>Fellowship in Cosmetic Dentistry</h4>
+        <p>Smile Design & Aesthetic Enhancements<br>Fellowship Training</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section style="padding:40px; max-width:900px; margin:auto;">
+    <h3>Our Mission</h3>
+    <p>We aim to deliver expert orthodontic care with precision and empathy, ensuring every patient walks out with a smile they’re proud of. At SmileCare, we believe in merging technology, aesthetics, and trust to create lifelong transformations.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#eee; text-align:center; padding:20px;">
+    <p>&copy; 2025 SmileCare Ortho Clinic | All rights reserved</p>
+  </footer>
+
+</body>
+</html>
