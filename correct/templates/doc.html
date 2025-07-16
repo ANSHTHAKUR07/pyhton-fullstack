@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Docs - Quantams</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0f172a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .brand h1 {
+      font-size: 1.5rem;
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f1f5f9;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    .sidebar {
+      width: 250px;
+      padding: 100px 20px 20px;
+      background: #e2e8f0;
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #0f172a;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: 500;
+      padding-left: 10px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #0ea5e9;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 120px 40px 40px;
+      max-width: 1000px;
+    }
+
+    .content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #0ea5e9;
+    }
+
+    .content h3 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .content p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+
+    pre {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0f172a;
+      color: white;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 100px 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="https://img.freepik.com/premium-vector/trade-bull-logo-icon-vector_841298-282.jpg" alt="Logo">
+      <h1>Quantams</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('bots') }}">Bots</a></li>
+        <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>📚 Docs Navigation</h2>
+    <a href="#getting-started">Getting Started</a>
+    <a href="#installation">Installation</a>
+    <a href="#bot-config">Bot Configuration</a>
+    <a href="#deployment">Bot Deployment</a>
+    <a href="#faq">FAQ</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h2 id="getting-started">Getting Started</h2>
+    <p>Welcome to Quantams Docs! This guide will walk you through everything you need to build, test, and deploy AI trading bots with ease.</p>
+
+    <h3 id="installation">Installation</h3>
+    <p>You don’t need to install anything. Just sign up and access the Quantams dashboard from your browser.</p>
+
+    <pre><code>https://quantams.ai/dashboard</code></pre>
+
+    <h3 id="bot-config">Bot Configuration</h3>
+    <p>Use our No-Code Builder to create your strategy by choosing:</p>
+    <ul>
+      <li> AI Strategy Type (Momentum, Swing, Options)</li>
+      <li> Data Source (Live feeds / Historical)</li>
+      <li> Entry & Exit Conditions</li>
+      <li> Risk Management Rules</li>
+    </ul>
+
+    <h3 id="deployment">Bot Deployment</h3>
+    <p>Once configured, you can deploy your bot in 1 click:</p>
+    <ol>
+      <li>Connect your broker (Zerodha, Binance, etc.)</li>
+      <li>Set capital allocation</li>
+      <li>Launch Bot 🚀</li>
+    </ol>
+
+    <h3 id="faq">Frequently Asked Questions</h3>
+    <p><strong>Q:</strong> Can I run multiple bots at once?<br/>
+    <strong>A:</strong> Yes, you can deploy multiple bots in parallel with separate capital and configurations.</p>
+
+    <p><strong>Q:</strong> Do I need to code anything?<br/>
+    <strong>A:</strong> Nope! Quantams is fully no-code. But you can use custom code blocks if you're a pro.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Quantams. Built for traders, powered by AI.
+  </footer>
+
+</body>
+</html>
