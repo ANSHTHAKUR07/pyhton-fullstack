@@ -1,0 +1,36 @@
+
+div{
+    background: url(https://plus.unsplash.com/premium_photo-1672201106204-58e9af7a2888?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    width: 500px;
+    height:auto ;
+  border: 2px NONE;
+ }
+
+ h1{
+    text-align: center;
+    margin-bottom: 20px;
+    background: url();
+ }
+ h2{
+    background-color: azure;
+    height:fit-content;
+    width: fit-content;
+ }
+
+
+ li{
+    list-style: none;
+    text-align: center;
+    
+ }
+
+ img{
+    width: 70px;
+    height:auto;
+ }
+
+.Imgdiv{
+    border-radius: none;
+    background: url(https://plus.unsplash.com/premium_photo-1672201106204-58e9af7a2888?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    
+}
