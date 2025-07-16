@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Place Order | RestoBite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Place Your Order</h2>
+    <form class="card p-4 shadow-sm" method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label>Your Name</label>
+        <input type="text" name="name" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label>Phone Number</label>
+        <input type="text" name="phone" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label>Food Item</label>
+        <select name="item" class="form-select" required>
+          <option value="">-- Select a Dish --</option>
+          <option>Margherita Pizza</option>
+          <option>Paneer Tikka</option>
+          <option>Veg Biryani</option>
+          <option>Pasta Alfredo</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label>Address</label>
+        <textarea name="address" class="form-control" rows="3" required></textarea>
+      </div>
+      <button class="btn btn-success w-100" type="submit">Confirm Order</button>
+    </form>
+  </div>
+</body>
+</html>
+<form method="post" class="card p-4 shadow-sm">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-success w-100">Place Order</button>
+</form>
+
